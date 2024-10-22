@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>专业主页</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.bg {
+			background-image: url("image/bg1.jpg");
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+
+		.ami {
+			width: auto;
+			height: auto;
+			font-size: 25px;
+			padding: 5px;
+			background-color: red;
+			position: absolute;
+			animation: wel 50s linear infinite;
+			animation-direction: alternate
+		}
+
+		.logo {
+			margin-left: 50px;
+			float: left
+		}
+
+		.title {
+			margin-left: 50px;
+			float: left
+		}
+
+		.tag {
+			margin-left: 50px;
+			margin-right: 50px;
+			float: left
+		}
+
+		.content {
+			margin-left: 50px;
+			margin-right: 50px
+		}
+
+		@keyframes wel {
+			0% {
+				background-color: red;
+				left: 5%;
+				top: 5%;
+			}
+
+			25% {
+				background-color: yellow;
+				left: 85%;
+				top: 50%;
+				transform: rotateZ(90deg);
+			}
+
+			50% {
+				background-color: blue;
+				left: 50%;
+				top: 85%;
+				transform: rotateZ(180deg);
+			}
+
+			75% {
+				background-color: green;
+				left: 5%;
+				top: 50%;
+				transform: rotateZ(270deg);
+			}
+
+			100% {
+				background-color: red;
+				left: 50%;
+				top: 5%;
+				transform: rotateZ(360deg);
+			}
+		}
+
+		/*
+	@keyframes wel
+	{
+  		0%{background-color:red; left:5%;top:5%;}
+		25%{background-color:yellow; left:85%;top:50%;}
+		50%{background-color:blue; left:50%;top:85%;}
+		75%{background-color:green; left:5%;top:50%;}
+		100%{background-color:red; left:50%;top:5%;}
+	}*/
+	</style>
+</head>
+
+<body class="bg" onload=disptime();>
+	<div class="ami" align="center">欢迎访问!</div>
+	<div class="logo">
+		<img src="image/logo.png" height="80px" width="80px">
+	</div>
+	<div class="title">
+		<h1>
+			<font face="隶书"><strong>山东建筑大学</strong></font>
+			<font face="华文行楷" color="red"><strong>信息与电气工程学院</strong></font>
+			<font face="楷体" color="purple"><strong>物联网工程</strong></font>
+		</h1>
+	</div>
+
+	<img src="image/photo.jpg" height="150px" width=100%>
+
+	<div class="tag">
+		<a href="https://www.sdjzu.edu.cn/" target="_blank">建大首页</a>
+	</div>
+	<div class="tag">
+		<a href="http://localhost:8080/ex1/new1.html">专业介绍</a>
+	</div>
+	<div class="tag">
+		<a href="http://www.baidu.com">课程设置</a>
+	</div>
+	<div class="tag">
+		<a href="http://www.baidu.com">本科生培养</a>
+	</div>
+	<div class="tag">
+		<a href="http://www.baidu.com">行业发展</a>
+	</div>
+	<div class="tag">
+		<a href="http://www.baidu.com">学生活动</a>
+	</div>
+	<div class="tag">
+		<a href="http://www.baidu.com">常用下载</a>
+	</div>
+	<br><br>
+	<h1 align="center"><strong>专业介绍</strong></h1>
+	<div class="content">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;物联网工程专业是为了适应我国数字经济发展以及新型基础设施建设的人才需求而开设，
+			通过学习学生将系统地掌握物联网相关理论、方法和技能，掌握智能传感器和物体识别技术、
+			工厂内无线与有线通信技术、数据挖掘及人工智能技术等知识，在智慧建筑、智能物流、
+			数字工厂等物联网应用领域的数据获取、传递、处理及应用等方面受到严格的科学训练，
+			能胜任物联网应用系统的规划、分析、设计、集成、开发、部署、运行、维护等工作。
+			本专业始建于2012年，是全国第二批获得教育部批准建设的物联网工程专业。
+			目前，该专业拥有教职工11人，具有博士学位8人，教授2人，副教授3人，博士生导师1人，硕士生导师6人。
+			拥有泰山学者青年专家1人，山东省优青1人，泉城学者1人。
+			该专业教师获得山东省教育厅科技进步一等奖、二等奖各1项。
+			现有山东省智能建筑技术重点实验室、山东省高校新型人机协作智能技术与机器人系统重点实验室、
+			山东省绿色建筑协同创新中心（共建）、山东省智慧城市协同创新中心（共建）、山东省电工电子实验教学示范中心、
+			电气信息综合实验中心等教学实训及科研创新平台。</p>
+	</div>
+	<hr height="10px" width=90% color="#0000FF"><br>
+	<div id="time" align="center"></div>
+	<script type="text/javascript">
+		function disptime() {
+			var now = new Date();
+			var year = now.getFullYear();
+			var month = now.getMonth() + 1;
+			if (month < 10) {
+				month = "0" + month;
+			}
+			var date = now.getDate();
+			if (date < 10) {
+				date = "0" + date;
+			}
+			var hour = now.getHours();
+			if (hour < 10) {
+				hour = "0" + hour;
+			}
+			var minute = now.getMinutes();
+			if (minute < 10) {
+				minute = "0" + minute;
+			}
+			var second = now.getSeconds();
+			if (second < 10) {
+				second = "0" + second;
+			}
+			var nowstr = "当前时间：" + year + "年" + month + "月" + date + "日" + hour + ":" + minute + ":" + second;
+			document.getElementById("time").innerHTML = nowstr;
+			//setInterval(function(){disptime()},1000);
+			setInterval(disptime, 1000);
+			//setInterval("disptime()",1000);
+		}
+	</script>
+</body>
+
+</html>
